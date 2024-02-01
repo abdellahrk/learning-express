@@ -3,12 +3,15 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
-    link(rel='stylesheet', href='/stylesheets/main.css')
-    link(rel='stylesheet', href='/stylesheets/fontawesome-all.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.css')
   body
     #main
       block header 
+        include ./partials/header.jade
       
-      block content
+      .container
+        block content
+    
+    script(src="/js/bootstrap.min.js")
       
 
