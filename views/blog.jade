@@ -1,0 +1,12 @@
+extends layout
+
+block content 
+    h1 Blog Posts
+    articles
+
+    ul 
+     each article in articles
+      .card.mb-2
+        .card-body
+            li
+              a(href="#") article.title
