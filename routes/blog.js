@@ -24,13 +24,24 @@ var articles = [
 
 router.get('/', function (req, res) {
     res.render('blog', {
-        articles: articles
+        'articles': articles
     })
 })
 
 router.get('/:id', function (req, res, next) {
+    // ['id': 2, 'another': 'slug-kjkj']
+    let id = req.params['id'];
+    var singleArticle = [];
+    
+
+    articles.forEach((article, index, articles) => {
+        if (article.id == id) {
+            singleArticle = article
+        }
+    })
+
     res.render('blogitem', {
-        //article: 
+       'article': singleArticle
     })
 })
 
