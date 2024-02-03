@@ -1,4 +1,8 @@
 extends layout 
 
 block content 
-    p This is a single blog page
+    h1  #{article.title}
+
+    p #{article.body} 
+
+    span Author: #{article.author}
